@@ -54,7 +54,7 @@ export const projects: Project[] = [
       'Professional-grade backend service built to apply backend best practices from a dedicated program. '
       + 'Provides end-to-end order lifecycle handling (cart → checkout → payment) with Swagger UI for interactive docs '
       + 'and a generated TypeScript Axios SDK for seamless client integration.',
-    demo: 'https://www.joachimtramper.dev',
+    demo: 'https://api.joachimtramper.dev',
     github: 'https://github.com/joachimtramper/E-Commerce-REST-API---Django-REST-Framework',
     videos: [
       {
