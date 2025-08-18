@@ -41,10 +41,10 @@ export default function Home() {
       </div>
 
       <div className="flex gap-3">
-        <Link to="/projects" className="btn">
+        <Link to="/projects" className="btn btn-accent">
           View projects →
         </Link>
-        <Link to="/contact" className="btn">
+        <Link to="/contact" className="btn btn-accent">
           Get in touch
         </Link>
       </div>
