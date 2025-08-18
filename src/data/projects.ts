@@ -1,6 +1,7 @@
 export type Project = {
   slug: string
   title: string
+  date: string
   status: 'Public' | 'Private'
   stack: string[]
   summary: string
@@ -19,6 +20,7 @@ export const projects: Project[] = [
   {
     slug: 'verify-mta',
     title: 'Meme Theft Auto – Access Verification App',
+    date: 'August 2025',
     status: 'Private',
     stack: [
       'TypeScript',
@@ -57,6 +59,7 @@ export const projects: Project[] = [
   {
     slug: 'ecommerce-api',
     title: 'E-Commerce REST API (Backend-only)',
+    date: 'June 2025',
     status: 'Public',
     stack: [
       'Python',

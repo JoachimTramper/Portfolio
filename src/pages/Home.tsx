@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <section className="py-10 space-y-6">
-      <h1 className="text-3xl font-bold">Joachim Tramper</h1>
+    <section className="py-6 space-y-6">
+      <h1 className="text-3xl font-bold mb-10">Joachim Tramper</h1>
 
       <div className="text-zinc-600 dark:text-zinc-400 max-w-2xl space-y-4">
         <p>

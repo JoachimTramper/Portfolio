@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 export default function Projects() {
   return (
-    <section className="py-10 space-y-6">
-      <h1 className="text-2xl font-bold">Selected Projects</h1>
+    <section className="py-6 space-y-6">
+      <h1 className="text-3xl font-bold">Selected Projects</h1>
       <div className="grid-auto">
         {projects.map((p) => (
           <Link
@@ -39,7 +39,10 @@ export default function Projects() {
               ))}
             </ul>
 
-            <div className="mt-3 text-sm">View case →</div>
+            <div className="mt-3 flex items-center justify-between text-sm text-zinc-500">
+              <span className="italic">{p.date}</span>
+              <span className="text-zinc-700 dark:text-zinc-200">View case →</span>
+            </div>
           </Link>
         ))}
       </div>

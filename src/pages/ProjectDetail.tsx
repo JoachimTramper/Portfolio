@@ -19,19 +19,22 @@ export default function ProjectDetail() {
   return (
     <article className="prose dark:prose-invert max-w-none">
       <header className="mb-6">
-        <div className="flex items-start justify-between gap-3">
-          <h1 className="mb-8">{project.title}</h1>
-          <span
-            className={
-              'badge text-sm ' +
-              (project.status === 'Public'
-                ? 'bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-900/40'
-                : 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-900/40')
-            }
-            title={project.status === 'Public' ? 'Code is public' : 'Code is private'}
-          >
-            {project.status}
-          </span>
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+          <h1 className="mb-0 sm:mb-10">{project.title}</h1>
+          <div className="flex items-center gap-3 justify-end sm:justify-start">
+            <span
+              className={
+                'badge text-sm ' +
+                (project.status === 'Public'
+                  ? 'bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-900/40'
+                  : 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-900/40')
+              }
+              title={project.status === 'Public' ? 'Code is public' : 'Code is private'}
+            >
+              {project.status}
+            </span>
+            <span className="text-sm italic text-zinc-500 dark:text-zinc-400">{project.date}</span>
+          </div>
         </div>
 
         <nav aria-label="Breadcrumb">
