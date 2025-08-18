@@ -18,15 +18,9 @@ export default function ProjectDetail() {
 
   return (
     <article className="prose dark:prose-invert max-w-none">
-      <nav aria-label="Breadcrumb">
-        <Link to="/projects" className="text-sm underline">
-          ← Back to projects
-        </Link>
-      </nav>
-
       <header className="mb-6">
         <div className="flex items-start justify-between gap-3">
-          <h1 className="mb-8">{project.title}</h1> {/* <-- extra ruimte */}
+          <h1 className="mb-8">{project.title}</h1>
           <span
             className={
               'badge text-sm ' +
@@ -39,6 +33,12 @@ export default function ProjectDetail() {
             {project.status}
           </span>
         </div>
+
+        <nav aria-label="Breadcrumb">
+          <Link to="/projects" className="text-sm underline">
+            ← Back to projects
+          </Link>
+        </nav>
 
         {project.stack?.length ? (
           <div className="mt-3">
@@ -75,7 +75,7 @@ export default function ProjectDetail() {
                 href={project.demo}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="btn"
+                className="btn btn-accent"
                 aria-label="Open live demo in a new tab"
               >
                 Live demo
@@ -87,7 +87,7 @@ export default function ProjectDetail() {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="btn"
+                className="btn btn-accent"
                 aria-label="Open GitHub repository in a new tab"
               >
                 GitHub
@@ -101,7 +101,7 @@ export default function ProjectDetail() {
                   href={v.url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="btn"
+                  className="btn btn-accent"
                   aria-label={`Open video: ${v.title}`}
                 >
                   {v.title}

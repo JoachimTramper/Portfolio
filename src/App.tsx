@@ -7,23 +7,34 @@ import Header from './components/Header'
 
 export default function App() {
   return (
-    <div className="h-dvh flex flex-col min-h-0 overflow-x-hidden">
-      <Header />
+    <div className="relative h-dvh flex flex-col min-h-0 overflow-x-hidden bg-white dark:bg-zinc-950">
+      {/* Achtergrondlogo */}
+      <div
+        className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"
+        aria-hidden="true"
+      >
+        <img src="/assets/logoJT.png" alt="Background logo" className="w-2/3 max-w-3xl opacity-5" />
+      </div>
 
-      <main className="min-h-0 grow overflow-y-auto overscroll-contain">
-        <div className="container py-10">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:slug" element={<ProjectDetail />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-      </main>
+      {/* Content */}
+      <div className="relative z-10 flex flex-col min-h-0 h-full">
+        <Header />
 
-      <footer className="border-t border-zinc-200 py-8 text-sm text-zinc-500 dark:border-zinc-800 text-center">
-        <div className="container">© {new Date().getFullYear()} Joachim Tramper</div>
-      </footer>
+        <main className="min-h-0 grow overflow-y-auto overscroll-contain">
+          <div className="container py-2 sm:py-10">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+        </main>
+
+        <footer className="border-t border-zinc-200 py-8 text-sm text-zinc-500 dark:border-zinc-800 text-center">
+          <div className="container">© {new Date().getFullYear()} Joachim Tramper</div>
+        </footer>
+      </div>
     </div>
   )
 }

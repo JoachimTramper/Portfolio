@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       container: { center: true, padding: '1rem' },
-
+      colors: { accent: '#ff3860' },
       fontFamily: {
         saira: ['"Saira Stencil One"', 'sans-serif'],
       },

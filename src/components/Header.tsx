@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import { HiOutlineMail } from 'react-icons/hi'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
@@ -6,6 +6,23 @@ import { MdOutlineFolderOpen } from 'react-icons/md'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpen(false)
+      }
+    }
+
+    if (open) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [open])
 
   return (
     <header className="relative border-b border-zinc-200 dark:border-zinc-800">
@@ -65,15 +82,25 @@ export default function Header() {
           aria-label="Open menu"
           aria-controls="mobile-menu"
           aria-expanded={open}
-          onClick={() => setOpen(v => !v)}
+          onClick={() => setOpen((v) => !v)}
         >
           {open ? (
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+              <path
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           ) : (
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+              <path
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           )}
         </button>
@@ -82,6 +109,7 @@ export default function Header() {
       {/* Mobile dropdown panel */}
       {open && (
         <div
+          ref={dropdownRef}
           id="mobile-menu"
           className="sm:hidden absolute right-2 top-14 z-50 w-fit rounded-xl border border-zinc-200 bg-white shadow-lg dark:border-zinc-800 dark:bg-zinc-950"
         >

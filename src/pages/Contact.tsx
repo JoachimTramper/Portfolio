@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="space-y-6">
+    <section className="py-10 space-y-6">
       <h1 className="text-2xl font-bold">Contact</h1>
 
       <ul className="space-y-2">
