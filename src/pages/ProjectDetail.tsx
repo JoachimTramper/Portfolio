@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { projects } from '@/data/projects'
+import { PlayCircle, Globe, Github } from 'lucide-react'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -78,10 +79,11 @@ export default function ProjectDetail() {
                 href={project.demo}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="btn btn-accent"
-                aria-label="Open live demo in a new tab"
+                className="btn btn-accent flex items-center gap-2"
+                aria-label={`Open ${project.demoLabel ?? 'live demo'} in a new tab`}
               >
-                Live demo
+                <Globe className="w-4 h-4" />
+                {project.demoLabel ?? 'Live demo'}
               </a>
             )}
 
@@ -90,9 +92,10 @@ export default function ProjectDetail() {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="btn btn-accent"
+                className="btn btn-accent flex items-center gap-2"
                 aria-label="Open GitHub repository in a new tab"
               >
+                <Github className="w-4 h-4" />
                 GitHub
               </a>
             )}
@@ -104,9 +107,10 @@ export default function ProjectDetail() {
                   href={v.url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="btn btn-accent"
+                  className="btn btn-accent flex items-center gap-2"
                   aria-label={`Open video: ${v.title}`}
                 >
+                  <PlayCircle className="w-4 h-4" />
                   {v.title}
                 </a>
               ))}

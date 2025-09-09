@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Folders, Mail } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -41,11 +42,11 @@ export default function Home() {
       </div>
 
       <div className="flex gap-3">
-        <Link to="/projects" className="btn btn-accent">
-          View projects →
+        <Link to="/projects" className="btn btn-accent flex items-center gap-2">
+          View projects <Folders size={16} />
         </Link>
-        <Link to="/contact" className="btn btn-accent">
-          Get in touch
+        <Link to="/contact" className="btn btn-accent flex items-center gap-2">
+          Get in touch <Mail size={16} />
         </Link>
       </div>
     </section>

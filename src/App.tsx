@@ -8,7 +8,7 @@ import Header from './components/Header'
 export default function App() {
   return (
     <div className="relative h-dvh flex flex-col min-h-0 overflow-x-hidden bg-white dark:bg-zinc-950">
-      {/* Achtergrondlogo */}
+      {/* Background logo */}
       <div
         className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"
         aria-hidden="true"
