@@ -25,13 +25,11 @@ export default function Home() {
         </p>
 
         <p>
-          I also built a comprehensive e-commerce REST API using Django REST Framework, designed for
-          performance, maintainability, and full test coverage. It features an advanced cart and
-          checkout system with atomic stock reservation, JWT authentication with optional 2FA,
-          secure webhook-based payment confirmation, and a fully typed TypeScript-Axios SDK
-          generated from an OpenAPI schema. The stack is containerized with Docker and deployed via
-          Railway, with logging, monitoring via Sentry, and scheduled background tasks powered by
-          Celery.
+          I also built a comprehensive e-commerce REST API, designed for performance, reliability,
+          and ease of integration. It includes a robust cart and checkout system with atomic stock
+          locking, secure payment flows, and optional two-factor authentication. The backend is
+          fully containerized and production-deployed with monitoring, background tasks, and a typed
+          TypeScript SDK.
         </p>
 
         <p>
