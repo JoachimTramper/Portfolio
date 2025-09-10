@@ -26,10 +26,10 @@ export default function Home() {
 
         <p>
           I also built a comprehensive e-commerce REST API, designed for performance, reliability,
-          and ease of integration. It includes a robust cart and checkout system with atomic stock
-          locking, secure payment flows, and optional two-factor authentication. The backend is
-          fully containerized and production-deployed with monitoring, background tasks, and a typed
-          TypeScript SDK.
+          and ease of integration. It includes a full-featured cart and checkout system with atomic
+          stock locking, secure payment flows, and optional two-factor authentication. The backend
+          is fully containerized and production-deployed with monitoring, background tasks, and a
+          typed TypeScript SDK.
         </p>
 
         <p>
