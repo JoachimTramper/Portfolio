@@ -14,7 +14,7 @@ export default function Home() {
         <p>
           I’m a full-stack developer with a strong focus on backend development and system
           architecture. I thrive on creating robust, scalable solutions that solve real-world
-          problems—whether that’s in e-commerce infrastructure or blockchain-powered access control.
+          problems, whether in e-commerce infrastructure or blockchain-based access control.
         </p>
 
         <p>
