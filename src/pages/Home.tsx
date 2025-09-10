@@ -18,35 +18,35 @@ export default function Home() {
         </p>
 
         <p>
-          One of my most recent projects is a Solana-based NFT verification platform, designed to
-          verify ownership of NFTs using wallet authentication, collection ID matching via the
-          Helius API, and smart access logic integrated with Firebase. From admin approval flows to
-          dynamic access checks and session caching, the system ensures a smooth and secure user
-          experience.
+          One of my most recent projects is a Solana-based NFT verification platform, built for the
+          Meme Theft Auto ecosystem. It combines wallet authentication, user-submitted video and
+          profile data, and admin approval flows to verify eligibility. Approved users receive a
+          free access NFT, which unlocks their personal dashboard and MTA token rewards.
         </p>
 
         <p>
-          I also built a comprehensive e-commerce REST API using Django REST Framework, engineered
-          for performance, maintainability, and full test coverage. It features an advanced cart and
-          checkout system with stock reservation, JWT authentication with optional 2FA,
-          webhook-based payment confirmation, and a TypeScript-Axios SDK generated from an OpenAPI
-          schema. The entire stack is containerized with Docker and deployed using Railway, with
-          logging, Sentry monitoring, and periodic tasks managed via Celery.
+          I also built a comprehensive e-commerce REST API using Django REST Framework, designed for
+          performance, maintainability, and full test coverage. It features an advanced cart and
+          checkout system with atomic stock reservation, JWT authentication with optional 2FA,
+          secure webhook-based payment confirmation, and a fully typed TypeScript-Axios SDK
+          generated from an OpenAPI schema. The stack is containerized with Docker and deployed via
+          Railway, with logging, monitoring via Sentry, and scheduled background tasks powered by
+          Celery.
         </p>
 
         <p>
-          I combine deep technical know-how with a pragmatic approach to product development. I’m
-          passionate about building systems that are secure, scalable, and
-          developer-friendly—designed not just to work, but to work well in production.
+          I combine deep technical know-how with a pragmatic approach to product development. I'm
+          passionate about building systems that are secure, scalable, and developer-friendly.
+          They’re designed not just to work, but to work well in production.
         </p>
       </div>
 
       <div className="flex gap-3">
         <Link to="/projects" className="btn btn-accent flex items-center gap-2">
-          View projects <Folders size={16} />
+          <Folders size={16} /> View projects
         </Link>
         <Link to="/contact" className="btn btn-accent flex items-center gap-2">
-          Get in touch <Mail size={16} />
+          <Mail size={16} /> Get in touch
         </Link>
       </div>
     </section>

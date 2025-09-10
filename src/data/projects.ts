@@ -37,7 +37,9 @@ export const projects: Project[] = [
       'Web3 verification portal with wallet login, NFT ownership checks, and conditional user flows.',
     description:
       'A production-ready full-stack application used to verify Solana wallet ownership and NFT possession as part of the Meme Theft Auto ecosystem. ' +
-      'The system enables users to submit their Social Club username, wallet address, and a short profile video, after which they are assigned to a Rockstar Crew. An admin manually verifies the user’s earned online cash and, once approved, assigns them a corresponding amount of MTA tokens. The user can then mint a free access NFT, which grants entry to a personalized dashboard.',
+      'The system enables users to submit their Social Club username, wallet address, and a short profile video, after which they are assigned to a Rockstar Crew. ' +
+      'An admin manually verifies the user’s earned online cash and approves them with a corresponding point score. ' +
+      'Once approved, the user can mint a free access NFT, which unlocks their personalized dashboard, where the assigned score is automatically converted into MTA tokens.',
     demo: 'https://verify.memetheftauto.io',
     demoLabel: 'Live App',
     github: null,
@@ -45,19 +47,19 @@ export const projects: Project[] = [
       'Ensure that only legitimate users can mint the access NFT and enter restricted parts of the Meme Theft Auto ecosystem, without violating Rockstar’s strict policy on obtaining third-party profile information.',
     analysis:
       'Designed a hybrid verification flow that combines off-chain identity validation with on-chain access control. ' +
-      'Because Rockstar strictly prohibits access to third-party Social Club profiles, we introduced a manual video-based verification step. ' +
-      'Users upload a screen recording of their own profile, after which an admin verifies identity within a shared crew and assigns an amount based on the user’s in-game earnings. ' +
-      'Once eligible, the user mints an access NFT via an external flow. NFT ownership is then validated on-chain to grant access to a personalized dashboard — where the assigned amount is converted into MTA tokens.',
+      'Because Rockstar prohibits access to third-party Social Club profiles, we introduced a manual video-based verification step. ' +
+      'Users upload a screen recording of their own profile. An admin then verifies the identity based on the shared crew and the video proof, and assigns an amount based on the user’s in-game earnings. ' +
+      'Once approved, the user mints an access NFT via an external flow. NFT ownership is then validated on-chain to unlock the personalized dashboard, where the assigned amount is converted into MTA tokens.',
     solution:
-      'Built a React/Node.js application powered by Firebase Firestore and deployed via Vercel and Railway. ' +
-      'Authentication is handled through Solana Wallet Adapter, allowing users to connect their wallet before submitting a verification request. ' +
-      'The app supports video uploads (profile walkthrough), wallet address capture, and crew assignment. ' +
-      'Admins review each submission within a custom admin panel, verify identity based on the shared crew and video proof, and assign an earned amount. ' +
-      'After minting the access NFT via an external flow, users gain entry to a gated dashboard — where the admin-assigned amount is converted into MTA tokens.',
+      'Built a React/Node.js application powered by Firebase Firestore, deployed via Vercel and Railway. ' +
+      'Authentication runs through the Solana Wallet Adapter, letting users connect their wallet before submitting a request. ' +
+      'The app supports video uploads, wallet address capture, and crew assignment. ' +
+      'Admins verify each submission in a custom admin panel, reviewing the shared crew and video proof before assigning an amount. ' +
+      'Once the user completes the external NFT minting flow, access to the dashboard is granted. The admin-assigned amount is automatically converted into MTA tokens.',
     result:
-      'Successful live deployment at verify.memetheftauto.io, enabling secure, gated access to the Meme Theft Auto ecosystem without violating Rockstar’s third-party data policy. ' +
-      'The system offers a clear user journey — from wallet connection and video verification to dashboard access and MTA token distribution — supported by a clean UI for both users and admins. ' +
-      'Built with scalability in mind, the platform lays a solid foundation for expanding the ecosystem — with potential for features like leaderboards, token-gated experiences, or on-chain rewards.',
+      'The platform is live at verify.memetheftauto.io and enables secure access to the Meme Theft Auto ecosystem, without violating Rockstar’s third-party data policy. ' +
+      'The user flow is clear, from wallet connection and video upload to dashboard access and token distribution. ' +
+      'The UI is clean and intuitive for both users and admins. The platform is built for scale and opens the door to future features like leaderboards, token-gated experiences, or on-chain rewards.',
     videos: [
       {
         title: 'User (Mobile)',
@@ -93,11 +95,11 @@ export const projects: Project[] = [
       'JWT',
     ],
     summary:
-      'Production-ready backend API with atomic stock reservations, secure webhooks, CI/CD and typed SDK.',
+      'Production-grade e-commerce backend API with atomic stock locking, secure webhooks, CI/CD pipeline, and a fully typed SDK.',
     description:
-      'Professional-grade backend service built to apply backend best practices from a dedicated program. ' +
-      'Provides end-to-end order lifecycle handling (cart → checkout → payment) with Swagger UI for interactive docs ' +
-      'and a generated TypeScript Axios SDK for seamless client integration.',
+      'Professional-grade backend service, developed independently to apply and showcase advanced backend best practices. ' +
+      'Covers the full order lifecycle, from cart creation and stock reservation to secure payment confirmation and automated invoicing. ' +
+      'Swagger UI provides interactive documentation, and a generated TypeScript Axios SDK enables smooth integration with any frontend.',
     demo: 'https://api.joachimtramper.dev',
     demoLabel: 'Live Demo',
     github: 'https://github.com/joachimtramper/E-Commerce-REST-API---Django-REST-Framework',
@@ -111,20 +113,17 @@ export const projects: Project[] = [
         url: 'https://youtu.be/qXba4KJ0Xi0',
       },
     ],
-    note:
-      'These demo videos show the main API flows. For full technical details — including CI/CD setup, ' +
-      'architecture decisions, and advanced features — please check the README on GitHub.',
+    note: 'These demo videos show the main API flows. For full technical details, including CI/CD setup, architecture decisions, and advanced features, please check the README on GitHub.',
     problem:
-      'Build a robust e-commerce backend that guarantees transactional integrity, security and clear developer UX.',
+      'Build a robust, well-documented e-commerce API that guarantees transactional integrity, security, and easy client integration.',
     analysis:
-      'Defined the data model and order lifecycle; planned atomic stock holds and payment confirmation via webhooks; ' +
-      'set up CI/CD with tests, linting and security scans.',
+      'Defined the data model and order lifecycle, including atomic stock holds and webhook-based payment confirmation. Set up CI/CD with tests, linting and security scans.',
     solution:
-      'Implemented DRF endpoints with JWT (+ optional TOTP 2FA), atomic stock reservation with a 10-minute hold, ' +
-      'secure webhook processing (custom header), background jobs via Celery/Redis, ' +
-      'typed OpenAPI docs + generated TS Axios client; Dockerized deployment on Railway.',
+      'Developed DRF endpoints with JWT authentication and optional TOTP 2FA for enhanced account security. ' +
+      'Implemented atomic stock reservation with a 10-minute hold and secure webhook processing via a custom header. ' +
+      'Background tasks run through Celery and Redis. The project includes typed OpenAPI documentation and an auto-generated TypeScript-Axios client. Deployment is fully Dockerized and hosted on Railway.',
     result:
-      'Reliable checkout flow; faster developer onboarding via Swagger UI and typed SDK; ' +
-      'production-style deployments with monitoring and audit trails.',
+      'Delivered a reliable and secure checkout flow that supports smooth developer onboarding. ' +
+      'The system includes monitoring via Sentry, audit trails with Django Simple History, interactive Swagger UI, and a fully typed TypeScript SDK.',
   },
 ]
