@@ -7,12 +7,14 @@ import { MdOutlineFolderOpen } from 'react-icons/md'
 export default function Header() {
   const [open, setOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setOpen(false)
-      }
+      const target = event.target as Node
+      if (dropdownRef.current?.contains(target)) return
+      if (toggleRef.current?.contains(target)) return
+      setOpen(false)
     }
 
     if (open) {
@@ -26,7 +28,6 @@ export default function Header() {
   return (
     <header className="relative border-b border-zinc-200 dark:border-zinc-800">
       <nav className="container flex h-14 items-center justify-between">
-        {/* Logo */}
         <NavLink
           to="/"
           title="Home"
@@ -76,14 +77,16 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
+          ref={toggleRef}
           type="button"
           className="sm:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
-          aria-label="Open menu"
+          aria-label={open ? 'Close menu' : 'Open menu'}
           aria-controls="mobile-menu"
           aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => (open ? setOpen(false) : setOpen(true))}
         >
           {open ? (
+            // Close icon
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path
                 strokeWidth="2"
@@ -93,6 +96,7 @@ export default function Header() {
               />
             </svg>
           ) : (
+            // Hamburger icon
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path
                 strokeWidth="2"
@@ -105,10 +109,10 @@ export default function Header() {
         </button>
       </nav>
 
-      {/* Mobile dropdown panel */}
+      {/* Mobile dropdown */}
       {open && (
         <div
-          ref={dropdownRef} // << alleen de dropdown zelf
+          ref={dropdownRef}
           id="mobile-menu"
           className="sm:hidden absolute right-2 top-14 z-50 w-fit rounded-xl border border-zinc-200 bg-white shadow-lg dark:border-zinc-800 dark:bg-zinc-950"
         >
