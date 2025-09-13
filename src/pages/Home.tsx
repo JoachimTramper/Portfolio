@@ -8,7 +8,7 @@ export default function Home() {
 
       <div className="text-zinc-600 dark:text-zinc-400 max-w-2xl space-y-4">
         <p>
-          <strong>Backend-focused full-stack developer</strong>
+          <strong>Full-stack developer</strong>
         </p>
 
         <p>
