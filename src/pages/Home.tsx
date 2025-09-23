@@ -52,10 +52,16 @@ export default function Home() {
 
         <div className="flex gap-3">
           <Link to="/projects" className="btn btn-accent flex items-center gap-2">
-            <Folders size={16} /> View Projects
+            <Folders size={16} />
+            {/* short label mobile, long label on sm+ */}
+            <span className="sm:hidden">Projects</span>
+            <span className="hidden sm:inline">View Projects</span>
           </Link>
+
           <Link to="/contact" className="btn btn-accent flex items-center gap-2">
-            <Mail size={16} /> Get In Touch
+            <Mail size={16} />
+            <span className="sm:hidden">Contact</span>
+            <span className="hidden sm:inline">Get In Touch</span>
           </Link>
         </div>
       </div>
