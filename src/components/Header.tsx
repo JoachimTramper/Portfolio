@@ -30,11 +30,11 @@ export default function Header() {
       <nav className="container flex h-14 items-center justify-between">
         <NavLink
           to="/"
-          title="Home"
-          className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-black text-black font-saira text-2xl"
+          aria-label="Home"
           onClick={() => setOpen(false)}
+          className="flex h-10 w-10 items-center justify-center"
         >
-          JT
+          <img src="/assets/logoJT.png" alt="JT Logo" className="h-10 w-10" />
         </NavLink>
 
         {/* Desktop menu */}

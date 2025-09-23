@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base styles */
+@layer base {
+  h1 {
+    @apply font-saira;
+  }
+}
+
 /* Minimal styles */
 .btn {
   @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 font-medium shadow-sm border border-zinc-200 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:bg-zinc-900;
