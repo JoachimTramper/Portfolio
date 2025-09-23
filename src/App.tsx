@@ -13,7 +13,11 @@ export default function App() {
         className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"
         aria-hidden="true"
       >
-        <img src="/assets/logoJT.png" alt="Background logo" className="w-2/3 max-w-3xl opacity-5" />
+        <img
+          src="/assets/background.png"
+          alt="Background logo"
+          className="w-2/3 max-w-3xl opacity-5"
+        />
       </div>
 
       {/* Content */}
