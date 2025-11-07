@@ -1,0 +1,12 @@
+{
+  "headers": [
+    {
+      "source": "/docs/joachimtramper-2025-resume-b18f",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/assets/cv.pdf",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
+  ]
+}

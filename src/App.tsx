@@ -4,6 +4,7 @@ import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 import Contact from './pages/Contact'
 import Header from './components/Header'
+import ResumePage from './pages/ResumePage'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/docs/joachimtramper-2025-resume-b18f" element={<ResumePage />} />
             </Routes>
           </div>
         </main>
