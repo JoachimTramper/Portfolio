@@ -34,7 +34,9 @@ export default function ProjectDetail() {
             >
               {project.status}
             </span>
-            <span className="text-sm italic text-zinc-500 dark:text-zinc-400">{project.date}</span>
+            <span className="text-sm italic text-zinc-500 dark:text-zinc-400 whitespace-nowrap">
+              {project.date}
+            </span>
           </div>
         </div>
 

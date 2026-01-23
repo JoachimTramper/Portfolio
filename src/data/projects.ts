@@ -20,7 +20,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: 'bamboo-comms',
-    title: 'Bamboo Comms – Real-time Messaging Platform',
+    title: 'Bamboo Comms – Real-Time Messaging Platform',
     date: 'January 2026',
     status: 'Public',
     stack: [
@@ -125,7 +125,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'ecommerce-api',
-    title: 'E-Commerce REST API (Backend-only)',
+    title: 'E-Commerce REST API (Backend-Only)',
     date: 'June 2025',
     status: 'Public',
     stack: [

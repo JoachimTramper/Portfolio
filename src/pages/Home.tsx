@@ -10,15 +10,18 @@ export default function Home() {
           <h1 className="text-4xl font-extrabold tracking-tight mt-2 sm:mt-1 lg:mt-2">
             Joachim Tramper
           </h1>
-          <span
-            className="badge text-lg sm:text-sm font-semibold
-    -mt-1 sm:mt-0 mb-2 sm:mb-0 self-end sm:self-auto
-    sm:px-2 sm:py-0.5
-    bg-amber-50 text-amber-700 border-amber-200
-    dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-900/40"
-          >
-            Full-stack Developer
-          </span>
+          <div className="flex items-center justify-between w-full sm:w-auto gap-2">
+            <span
+              className="badge text-lg sm:text-sm font-semibold
+              sm:px-2 sm:py-0.5
+              bg-amber-50 text-amber-700 border-amber-200
+              dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-900/40"
+            >
+              Full-Stack Developer
+            </span>
+
+            <span className="text-sm italic text-zinc-500">January 2026</span>
+          </div>
         </div>
         <div className="text-zinc-600 dark:text-zinc-400 max-w-2xl space-y-4">
           <p>
