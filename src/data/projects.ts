@@ -19,6 +19,54 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: 'bamboo-comms',
+    title: 'Bamboo Comms – Real-time Messaging Platform',
+    date: 'January 2026',
+    status: 'Public',
+    stack: [
+      'TypeScript',
+      'Node.js',
+      'React',
+      'Next.js',
+      'NestJS',
+      'PostgreSQL',
+      'Tailwind CSS',
+      'Prisma',
+      'JWT',
+      'Socket.IO',
+      'Vercel',
+      'Railway',
+    ],
+    summary:
+      'Real-time messaging platform with channels, direct messages, live presence, reactions, and an embedded AI assistant for in-channel assistance and automation.',
+    description:
+      'A full-stack real-time communication platform designed to explore the core challenges of building modern chat systems. ' +
+      'The application supports public channels and direct messages, threaded conversations, reactions, attachments, read state, and real-time presence. ' +
+      'Its architecture is designed to be extensible, allowing features such as in-channel automation and AI-assisted interactions to be integrated naturally.',
+
+    demo: 'https://bamboo-comms.joachimtramper.dev',
+    demoLabel: 'Live App',
+    github: 'https://github.com/JoachimTramper/bamboo-comms',
+    problem:
+      'Designing a real-time communication system involves non-trivial challenges such as state consistency, presence tracking, read/unread behavior, and safe integration of background automation. ' +
+      'The goal of this project was to explore and demonstrate how these concerns can be handled in a production-style architecture.',
+    analysis:
+      'Real-time communication is primarily a state coordination problem: messages, reactions, mentions, read state, and presence must remain consistent across clients, reconnects, and partial UI context. ' +
+      'The system was designed around clear separation of concerns, with the database acting as the source of truth and WebSocket events used strictly for real-time propagation. ' +
+      'Client behavior is driven by explicit state transitions, allowing the UI to remain declarative and predictable across devices.',
+    solution:
+      'Built a full-stack real-time communication platform using a Next.js frontend with Tailwind CSS and a NestJS backend powered by Prisma and PostgreSQL. ' +
+      'Authentication is handled via JWT-based access tokens with silent refresh using secure HttpOnly cookies, enabling long-lived sessions without disrupting the user experience. ' +
+      'The messaging system was designed around clear separation of concerns between transport, persistence, and presentation, ensuring predictable behavior across reconnects and devices. ' +
+      'The architecture supports real-time updates, message reactions, attachments, and read state while remaining resilient to partial failures and network interruptions.',
+    result:
+      'The platform is running reliably in production and demonstrates stable real-time behavior under normal usage. ' +
+      'Core messaging features such as channels, direct messages, reactions, attachments, and read state work consistently across devices. ' +
+      'The application serves as a solid foundation for team communication or community chat, with an architecture that is easy to extend with features such as moderation tools, integrations, or advanced automation.',
+    videos: [],
+    note: '',
+  },
+  {
     slug: 'verify-mta',
     title: 'Meme Theft Auto – Access Verification App',
     date: 'August 2025',
