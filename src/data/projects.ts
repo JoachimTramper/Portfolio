@@ -43,7 +43,6 @@ export const projects: Project[] = [
       'A full-stack real-time communication platform designed to explore the core challenges of building modern chat systems. ' +
       'The application supports public channels and direct messages, threaded conversations, reactions, attachments, read state, and real-time presence. ' +
       'Its architecture is designed to be extensible, allowing features such as in-channel automation and AI-assisted interactions to be integrated naturally.',
-
     demo: 'https://bamboo-comms.joachimtramper.dev',
     demoLabel: 'Live App',
     github: 'https://github.com/JoachimTramper/bamboo-comms',
