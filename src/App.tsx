@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { useRef } from 'react'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
@@ -8,6 +9,8 @@ import ScrollToTop from './components/ScrollToTop'
 import ResumePage from './pages/ResumePage'
 
 export default function App() {
+  const scrollRef = useRef<HTMLDivElement>(null)
+
   return (
     <div className="relative h-dvh flex flex-col min-h-0 overflow-x-hidden bg-white dark:bg-zinc-950">
       {/* Background logo */}
@@ -26,9 +29,9 @@ export default function App() {
       <div className="relative z-10 flex flex-col min-h-0 h-full">
         <Header />
 
-        <main className="min-h-0 grow overflow-y-auto overscroll-contain">
+        <main ref={scrollRef} className="min-h-0 grow overflow-y-auto overscroll-contain">
           <div className="container py-2 sm:py-10">
-            <ScrollToTop />
+            <ScrollToTop containerRef={scrollRef} />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
