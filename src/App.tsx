@@ -4,6 +4,7 @@ import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 import Contact from './pages/Contact'
 import Header from './components/Header'
+import ScrollToTop from './components/ScrollToTop'
 import ResumePage from './pages/ResumePage'
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
 
         <main className="min-h-0 grow overflow-y-auto overscroll-contain">
           <div className="container py-2 sm:py-10">
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
