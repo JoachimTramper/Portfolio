@@ -164,7 +164,8 @@ export const projects: Project[] = [
     problem:
       'Build a robust, well-documented e-commerce API that guarantees transactional integrity, security, and easy client integration.',
     analysis:
-      'Defined the data model and order lifecycle, including atomic stock holds and webhook-based payment confirmation. Set up CI/CD with tests, linting and security scans.',
+      'Defined the data model and order lifecycle, including atomic stock holds and webhook-based payment confirmation. ' +
+      'Established CI/CD with linting, security scans, and 200+ automated unit tests covering critical order flows and edge cases.',
     solution:
       'Developed DRF endpoints with JWT authentication and optional TOTP 2FA for enhanced account security. ' +
       'Implemented atomic stock reservation with a 10-minute hold and secure webhook processing via a custom header. ' +
